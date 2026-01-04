@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Top Bar ===== */
+
 .links {
   background-color: rgb(235, 94, 186);
   display: flex;
@@ -34,7 +34,7 @@ body {
   margin: 0 5px;
 }
 
-/* ===== Main Navbar ===== */
+
 nav {
   background-color: white;
   display: flex;
@@ -43,7 +43,7 @@ nav {
   padding: 15px 5%;
   flex-wrap: wrap;
   position: fixed;
-  top: 40px; /* below top bar */
+  top: 40px;
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
@@ -54,7 +54,7 @@ nav {
   height: auto;
 }
 
-/* menu icon (hidden on desktop) */
+
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -62,7 +62,7 @@ nav {
   color: rgb(43, 43, 134);
 }
 
-/* nav links */
+
 .nav-links {
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@ nav {
   display: inline-block;
 }
 
-/* ===== Hero Section ===== */
+
 .heroo {
   background-image: url('images/h1_hero (1).png');
   background-position: center;
@@ -95,7 +95,7 @@ nav {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  margin-top: 140px; /* offset for fixed navbars */
+  margin-top: 140px; 
 }
 
 .box {
@@ -139,7 +139,7 @@ nav {
   cursor: pointer;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 992px) {
   .links {
     flex-direction: column;
@@ -215,7 +215,7 @@ nav {
 
 
 .hero {
-    /* margin: 30px 20px; */
+    
     padding: 20px;
     background-color: white;
 }
@@ -645,7 +645,7 @@ footer {
   text-decoration: underline;
 }
 
-/* copyright line */
+
 .footer-bottom {
   width: 100%;
   text-align: center;
@@ -661,7 +661,7 @@ footer {
   margin: 0;
 }
 
-/* responsive design */
+
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
@@ -767,4 +767,5 @@ footer {
     footer {
         padding: 60px 200px;
     }
+
 }
