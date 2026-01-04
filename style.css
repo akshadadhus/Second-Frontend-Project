@@ -1,0 +1,770 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== Top Bar ===== */
+.links {
+  background-color: rgb(235, 94, 186);
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5%;
+  font-size: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.links div {
+  margin: 5px 0;
+}
+
+.icons span {
+  margin: 0 5px;
+}
+
+/* ===== Main Navbar ===== */
+nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 40px; /* below top bar */
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* menu icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: rgb(43, 43, 134);
+}
+
+/* nav links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(43, 43, 134);
+  font-weight: 600;
+  margin: 5px 10px;
+}
+
+.btn a {
+  background: #00d9ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* ===== Hero Section ===== */
+.heroo {
+  background-image: url('images/h1_hero (1).png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-top: 140px; /* offset for fixed navbars */
+}
+
+.box {
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  border-radius: 30px;
+  height: 400px;
+  width: 500px;
+  text-align: center;
+}
+
+.box h1 {
+  color: rgb(19, 32, 147);
+  font-weight: bolder;
+  line-height: 1.2;
+  font-family: "Fredoka One", cursive;
+  font-size: 70px;
+}
+
+.box h2 {
+  color: rgb(235, 179, 9);
+  font-size: 50px;
+  font-weight: bolder;
+  margin: 10px 0;
+  font-family: "Fredoka One", cursive;
+}
+
+.box button {
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(228, 13, 178);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .links {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .btn {
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .heroo {
+    margin-top: 180px;
+  }
+
+  .box {
+    position: static;
+    transform: none;
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px 10px;
+  }
+
+  .box h1 {
+    font-size: 9vw;
+  }
+
+  .box h2 {
+    font-size: 7vw;
+  }
+
+  .box button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+
+
+
+
+
+.hero {
+    /* margin: 30px 20px; */
+    padding: 20px;
+    background-color: white;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: "Fredoka One", cursive;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 16px;
+    color: darkblue;
+    letter-spacing: 0.5px;
+    margin: 10px auto;
+    line-height: 30px;
+    max-width: 800px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 50px 0;
+    font-family: "Fredoka One", cursive;
+
+}
+
+.about-icon {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    max-width: 500px;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.classes {
+    background-image: url('images/section_bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding: 50px 20px; */
+    text-align: center;
+}
+
+.section-class h2 {
+    color: rgb(16, 16, 86);
+    font-size: 30px;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+.section-class h1 {
+    color: rgb(16, 16, 86);
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 20px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.section-class p {
+    letter-spacing: 0.5px;
+    color: darkblue;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.card-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.badge {
+    position: absolute;
+    background: #ff4d88;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    top: 15px;
+    left: 15px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 0.5px solid rgb(218, 204, 204);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #3b2e83;
+    margin-bottom: 8px;
+    font-family: "Fredoka One", cursive;
+}
+
+.card-title.pink {
+    color: #ff4d88;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 15px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 15px;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.card-footer span {
+    font-weight: bold;
+}
+
+.age {
+    color: #ff4d88;
+}
+
+.classes-count {
+    color: #f2a93b;
+}
+
+.price {
+    color: #008cff;
+}
+
+
+.Event {
+    background-image: url('images/section_bg2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+}
+
+.info {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info h4 {
+    color: rgb(199, 48, 159);
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: "Fredoka One", cursive;
+}
+
+.info h1 {
+    color: rgb(11, 11, 98);
+    font-size: 30px;
+    margin: 20px 0;
+    font-family: "Fredoka One", cursive;
+}
+
+.info p {
+    letter-spacing: 0.5px;
+    color: darkblue;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.info button {
+    padding: 8px 20px;
+    background-color: rgb(208, 18, 170);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.info button:hover {
+    background-color: white;
+    border: 2px solid rgb(208, 18, 170);
+    color: rgb(208, 18, 170);
+}
+
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h1 {
+    color: rgb(16, 16, 86);
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 20px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.subtitle {
+    letter-spacing: 0.5px;
+    color: darkblue;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.team-wrap {
+    position: relative;
+    margin: 30px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+.team-card {
+    width: 240px;
+    min-width: 240px;
+    text-align: center;
+    background: transparent;
+}
+
+.avatar {
+    width: 100%;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 18px;
+    background: linear-gradient(180deg, #f7f7fb, #fff);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: 700;
+    color: #2b2352;
+    font-size: 20px;
+    margin: 6px 0;
+    font-family: 'Trebuchet MS';
+}
+
+.role {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+
+.instra {
+    display: flex;
+
+
+
+}
+
+
+
+.instra img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+footer {
+  background-color: #3b4da0;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+}
+
+.footer-left img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons a:hover {
+  background: white;
+  color: #3b4da0;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* copyright line */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  
+  
+}
+
+.footer-bottom p {
+  font-size: 15px;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links, .footer-left {
+    width: 100%;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+    .links {
+        font-size: 16px;
+        padding: 8px 50px;
+    }
+
+    .box {
+        padding: 30px;
+        border-radius: 50px;
+        left: 13%;
+    }
+
+    .box h1 {
+        font-size: 50px;
+    }
+
+    .box h2 {
+        font-size: 40px;
+    }
+
+    .hero {
+        margin: 50px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .about-section {
+        flex-direction: row;
+        gap: 100px;
+        margin: 100px;
+    }
+
+    .card-container {
+        flex-direction: row;
+        padding: 40px;
+    }
+
+    .section-class h1 {
+        font-size: 50px;
+    }
+
+    .info {
+        width: 500px;
+    }
+
+    .section h1 {
+        font-size: 50px;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 60px 50px;
+    }
+
+    .arrow {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    nav {
+        padding: 15px 50px;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+
+    .nav-links a {
+        margin-left: 20px;
+    }
+
+    .instra {
+        justify-content: space-between;
+    }
+
+    footer {
+        padding: 60px 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    footer {
+        padding: 60px 200px;
+    }
+}
